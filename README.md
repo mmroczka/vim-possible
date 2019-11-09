@@ -32,36 +32,77 @@ vim-possible is a configuration using GokuRakuJoudo to generate Karabiner profil
 
 Vim mode is the way to take full use of CapsLock key. When `CapsLock` is pressed down, vim mode will be toggled on. To get out of any mode simply press `i` for `insert` just like you would to do regular .
 
-### Navigation Commands
-#### Major Navigation Commands
+| Key Symbol |   Keyboard Button    | Note                       |
+|------------|----------------------|----------------------------|
+| `⌥`        |       option         |                            |
+| `⌘`        |       command        |                            |
+| ⇧          |       shift          | Note the difference between shift (⇧) and the up arrow (↑) on a keyboard |
+| ⌃          |       control        |                            |
+| ⇪          |       capslock       |                            |
 
-| Key Combo | Effect                 |    Notes     |
-|-----|------------------------|--------------|
-| `h` | move left              |              |
-| `j` | move down              |              |
-| `k` | move up                |              |
-| `l` | move right             |              |
-| `w` | move one word forward  | moves you to the beginning of the next 'word' same as doing an option+right arrow then a space |
-| `e` | move to word end       | moves you to the end of the current 'word' same as doing an option+right arrow |
-| `b` | move one word backward |              |
+### Cursor Movement Commands
+| Key Combo | Effect                         |   Mode Change   |    Keyboard Equivalent     |
+|-----------|--------------------------------|-----------------|----------------------------|
+| `k`       | moves cursor up                |                 |                  `↑`       |
+| `j`       | moves cursor down              |                 |                  `↓`       |
+| `h`       | moves cursor left              |                 |                  `←`       |
+| `l`       | moves cursor right             |                 |                  `→`       |
+| `w`       | moves cursor one word forward  |                 |             `⌥`+`→`, `→`   |
+| `e`       | move to word end               |                 |             `⌥`+`→`        |
+| `b`       | move one word backward         |                 |               `⌥`+`←`      |
+| `gg`      | go to top of file              |                 |               `⌘`+`↑`      |
+| ⇧+`g` or `G` | go to bottom of file        |                 |               `⌘`+`↓`      |
+| ⇧+`5` or `%` | :no_entry_sign: Not possible. Need context we don't have.       |  |       |
+| ⇧+`w` or `W` | :no_entry_sign: Not possible. Need context we don't have.          |  |    |
+| ⇧+`e` or `E` | :no_entry_sign: Not possible. Need context we don't have.          |  |    |
+| ⇧+`b` or `B` | :no_entry_sign: Not possible. Need context we don't have.          |  |    |
+| ⇧+`h` or `H` | :construction: TODO: should move to top of screen. research if possible. :warning:        |  |    |
+| ⇧+`m` or `M` | :construction: TODO: should move to middle of the screen. research if possible. :warning: |  |    |
+| ⇧+`l` or `L` | :construction: TODO: should move to bottom of screen. research if possible. :warning:     |  |    |
+| ⇧+`4` or `$` | move to start of line       |              |         `⌘`+`←`               |
+| `0`       | move to end of line            |              |         `⌘`+`→`               |
+| ⌃+`d`     | move down 15 lines             |              | `↓` but like pressed 15 times |
+| ⌃+`u`     | move up 15 lines               |              | `↑` but like pressed 15 times |
+| ⌃+`f`     | move forward                   |                 |        page down           |
+| ⌃+`b`     | move backward                  |                 |         page up            |
 
-#### Lesser Known Navigation Commands
+### Insert Commands
+| Key Combo | Effect                       |   Mode Change   |    Keyboard Equivalent     |
+|-----------|------------------------------|-----------------|----------------------------|
+| `i`       |                              | toggles off `vim mode` to `insert mode` |    |
+| ⇧+`i`     | move to beginning of line    | `vim mode` to `insert mode` |     `⌘`+`←`    |
+| `a`       | move cursor right            | `vim mode` to `insert mode` |                |
+| ⇧+`a`     | move to end of line          | `vim mode` to `insert mode` |     `⌘`+`→`    |
+| `ea`      | :construction: TODO: insert (append) at the end of the word | `vim mode` to `insert mode` |   `⌥`+`→`   |
+| `o`       | append (open) new line below current line | `vim mode` to `insert mode` | `⌘`+`→`, `return`  |
+| ⇧+`o`     | append (open) new line above current line | `vim mode` to `insert mode` | `↑`, `⌘`+`→`, `return` |
 
-| Key Combo  | Effect                 |    Notes            |
-|------------|------------------------|---------------------|
-| `CTRL + d` | move down 15 lines     |                     |
-| `CTRL + u` | move up 15 lines       |                     |
-| `CTRL + f` | move forward           | simulates page down |
-| `CTRL + b` | move backward          | simulates page up   |
 
+
+#### Editing Commands
+| Key Combo  | Effect                         |   Mode Change   |    Keyboard Equivalent     |
+|------------|--------------------------------|-----------------|----------------------------|
+| `r`<char to replace> | replace a single character |           | `delete_forward` + `<char>`|
+| ⇧+`j` or `J` | join line below to the current one |           |  `⌘`+`→`, `delete_forward` |
+| `cc`        | change (replace) entire line  | `vim mode` to `insert mode` | `⌘`+`←`, ⇧+`⌘`+`→`, `delete` |
+| `C`         |  change (replace) to the end of the line  | `vim mode` to `insert mode` | ⇧+`⌘`+`→`, `delete` |
+| `c`+`⇧+`4` or `c$` |  change (replace) to the end of the line  | `vim mode` to `insert mode` | ⇧+`⌘`+`→`, `delete` |
+| `ciw`       | change (replace) entire word | `vim mode` to `insert mode` | `⌥`+`←`, ⇧+`⌥`+`→`, `delete` |
+| `cw`        | change (replace) to the end of the word | `vim mode` to `insert mode` | `⌥`+`→`, `delete` |
+| `s`         | delete character and substitute text | `vim mode` to `insert mode` | `delete_forward` |
+| `S`         | delete line and substitute text (same as cc) | `vim mode` to `insert mode` | `⌘`+`←`, ⇧+`⌘`+`→`, `delete` |
+| `xp`        | transpose two letters (delete and paste)     | `vim mode` to `insert mode` | ⇧+`→`, `⌘`+`c`, `delete`, `→`, `⌘`+`v` |
+| `u`        | undo last action       |                     |                                |
+| `⌃`+`r`    | redo last action       |                     |                                |
+  
 ## Installation
 
 1. Install [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
 2. Install [Goku](https://github.com/yqrashawn/GokuRakuJoudo)
-3. Install k-goku
+3. Install vim-possible
 
 ```
-curl https://raw.githubusercontent.com/kchen0x/k-goku/master/karabiner.edn > ~/.config/karabiner.edn
+curl https://.../master/karabiner.edn > ~/.config/karabiner.edn
 
 goku
 ```
