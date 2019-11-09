@@ -41,30 +41,30 @@ Vim mode is the way to take full use of CapsLock key. When `CapsLock` is pressed
 | ⇪          |       capslock       |                            |
 
 ### Cursor Movement Commands
-| Key Combo | Effect                         |   Mode Change   |    Keyboard Equivalent     |
-|-----------|--------------------------------|-----------------|----------------------------|
-| `k`       | moves cursor up                |                 |                  `↑`       |
-| `j`       | moves cursor down              |                 |                  `↓`       |
-| `h`       | moves cursor left              |                 |                  `←`       |
-| `l`       | moves cursor right             |                 |                  `→`       |
-| `w`       | moves cursor one word forward  |                 |             `⌥`+`→`, `→`   |
-| `e`       | move to word end               |                 |             `⌥`+`→`        |
-| `b`       | move one word backward         |                 |               `⌥`+`←`      |
-| `gg`      | go to top of file              |                 |               `⌘`+`↑`      |
-| ⇧+`g` or `G` | go to bottom of file        |                 |               `⌘`+`↓`      |
-| ⇧+`5` or `%` | :no_entry_sign: Not possible. Need context we don't have.       |  |       |
-| ⇧+`w` or `W` | :no_entry_sign: Not possible. Need context we don't have.          |  |    |
-| ⇧+`e` or `E` | :no_entry_sign: Not possible. Need context we don't have.          |  |    |
-| ⇧+`b` or `B` | :no_entry_sign: Not possible. Need context we don't have.          |  |    |
-| ⇧+`h` or `H` | :construction: TODO: should move to top of screen. research if possible. :warning:        |  |    |
-| ⇧+`m` or `M` | :construction: TODO: should move to middle of the screen. research if possible. :warning: |  |    |
-| ⇧+`l` or `L` | :construction: TODO: should move to bottom of screen. research if possible. :warning:     |  |    |
-| ⇧+`4` or `$` | move to start of line       |              |         `⌘`+`←`               |
-| `0`       | move to end of line            |              |         `⌘`+`→`               |
-| ⌃+`d`     | move down 15 lines             |              | `↓` but like pressed 15 times |
-| ⌃+`u`     | move up 15 lines               |              | `↑` but like pressed 15 times |
-| ⌃+`f`     | move forward                   |                 |        page down           |
-| ⌃+`b`     | move backward                  |                 |         page up            |
+| Key Combo | Effect                         |  Keyboard Equivalent   |
+|-----------|--------------------------------|------------------------|
+| `k`       | moves cursor up                |      `↑`               |
+| `j`       | moves cursor down              |      `↓`               |
+| `h`       | moves cursor left              |      `←`               |
+| `l`       | moves cursor right             |      `→`               |
+| `w`       | moves cursor one word forward  |      `⌥`+`→`, `→`      |
+| `e`       | move to word end               |      `⌥`+`→`           |
+| `b`       | move one word backward         |      `⌥`+`←`           |
+| `gg`      | go to top of file              |      `⌘`+`↑`           |
+| ⇧+`g` or `G` | go to bottom of file        |      `⌘`+`↓`           |
+| ⇧+`5` or `%` | :no_entry_sign: Not possible. Need context we don't have.  |
+| ⇧+`w` or `W` | :no_entry_sign: Not possible. Need context we don't have.  |
+| ⇧+`e` or `E` | :no_entry_sign: Not possible. Need context we don't have.  |
+| ⇧+`b` or `B` | :no_entry_sign: Not possible. Need context we don't have.  |
+| ⇧+`h` or `H` | :construction: TODO: should move to top of screen. research if possible. :warning:    |
+| ⇧+`m` or `M` | :construction: TODO: should move to middle of the screen. research if possible. :warning: |
+| ⇧+`l` or `L` | :construction: TODO: should move to bottom of screen. research if possible. :warning:     |
+| ⇧+`4` or `$` | move to start of line       |      `⌘`+`←`           |
+| `0`       | move to end of line            |      `⌘`+`→`           |
+| ⌃+`d`     | move down 15 lines             | `↓` but like pressed 15 times |
+| ⌃+`u`     | move up 15 lines               | `↑` but like pressed 15 times |
+| ⌃+`f`     | move forward                   |      page down         |
+| ⌃+`b`     | move backward                  |      page up           |
 
 ### Insert Commands
 | Key Combo | Effect                       |   Mode Change   |    Keyboard Equivalent     |
