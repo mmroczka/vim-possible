@@ -20,7 +20,7 @@ You can do everything by modifying your keyboard!
 
 [Goku](https://github.com/yqrashawn/GokuRakuJoudo) is a tool to let you manage your Karabiner configuration with ease.
 
-Karbiner Elements uses JSON as it's config file. This leads to thousands lines of JSON (sometimes over 20,000 lines). Which makes it really hard to edit the config file and iterate on your keymap.
+Karabiner Elements uses JSON as it's config file. This leads to thousands lines of JSON (sometimes over 20,000 lines). Which makes it really hard to edit the config file and iterate on your keymap.
 
 Goku use the [edn format](https://github.com/edn-format/edn) to the rescue.
 
